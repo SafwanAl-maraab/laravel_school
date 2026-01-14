@@ -5,12 +5,9 @@ WORKDIR /var/www/html
 
 RUN composer install --no-dev --optimize-autoloader
 
-RUN php artisan key:clear || true
-RUN php artisan config:clear || true
-RUN php artisan route:clear || true
-RUN php artisan view:clear || true
+RUN touch database/database.sqlite
 
 RUN chown -R nginx:nginx /var/www/html \
- && chmod -R 775 storage bootstrap/cache
+ && chmod -R 775 storage bootstrap/cache database
 
 ENV WEBROOT=/var/www/html/public
