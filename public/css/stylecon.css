@@ -1,0 +1,432 @@
+/* General Styling */
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #555555;
+  background-color: #F9F5F0; /* Light beige/off-white */
+  direction: rtl;
+  text-align: right;
+  line-height: 1.6;
+}
+
+/* --- Hero Section Styling --- */
+.contact-hero-section {
+  height: 60vh;
+  background-image: url('https://images.unsplash.com/photo-1519641726058-22d71687d7b0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* High-quality modern interior */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  overflow: hidden; /* Ensure overlay covers perfectly */
+}
+
+.contact-hero-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(26, 43, 60, 0.7); /* Dark blue overlay with transparency */
+}
+
+.contact-hero-section .hero-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 4.5rem; /* Larger font for impact */
+  margin-bottom: 1rem;
+  color: #FFFFFF;
+}
+
+.contact-hero-section .hero-subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: #F0F0F0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* --- Main Contact Section Styling --- */
+.contact-section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: #F9F5F0;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 3rem;
+  color: #1A2B3C; /* Dark blue */
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  right: 0; /* Aligned to the right for RTL */
+  bottom: 0;
+  width: 80px;
+  height: 4px;
+  background-color: #C49C48; /* Golden accent */
+  border-radius: 2px;
+}
+
+.section-lead {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555555;
+  margin-bottom: 2.5rem;
+}
+
+/* Contact Info List */
+.contact-info li {
+  margin-bottom: 1.8rem;
+  display: flex;
+  align-items: flex-start; /* Align icon and text at the top */
+}
+
+.contact-info .fa-2x {
+  color: #C49C48; /* Golden accent for icons */
+  min-width: 40px; /* Fixed width for icon for alignment */
+  text-align: center;
+  margin-left: 1rem; /* Space between icon and text */
+  margin-top: 5px; /* Slight vertical adjustment */
+}
+
+.contact-info .info-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #1A2B3C;
+  margin-bottom: 0.3rem;
+  font-size: 1.25rem;
+}
+
+.contact-info .info-text {
+  font-family: 'Open Sans', sans-serif;
+  color: #666666;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+  display: block; /* Ensure it takes full width */
+}
+
+.contact-info .info-text:hover {
+  color: #C49C48; /* Golden hover effect */
+}
+
+/* Social Icons */
+.social-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #1A2B3C;
+  margin-bottom: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.social-icons a {
+  font-size: 1.8rem;
+  color: #1A2B3C;
+  margin-left: 1.2rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+
+.social-icons a:hover {
+  color: #C49C48; /* Golden hover effect */
+  transform: translateY(-5px); /* Slight lift on hover */
+}
+
+/* --- Contact Form Styling --- */
+.contact-form {
+  background-color: #FFFFFF;
+  padding: 3rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Softer shadow */
+  animation: fadeIn 1s ease-out; /* Simple fade-in animation */
+}
+
+.form-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #1A2B3C;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.form-label {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: #1A2B3C;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.form-control {
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  border: 1px solid #DDDDDD;
+  background-color: #F8F8F8;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #C49C48;
+  box-shadow: 0 0 0 0.25rem rgba(196, 156, 72, 0.25); /* Golden focus ring */
+  background-color: #FFFFFF;
+}
+
+textarea.form-control {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.btn-submit {
+  background-color: #1A2B3C; /* Dark blue button */
+  color: #FFFFFF;
+  border: none;
+  padding: 0.9rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%; /* Full width button */
+  margin-top: 1.5rem;
+}
+
+.btn-submit:hover {
+  background-color: #C49C48; /* Golden hover effect */
+  color: #1A2B3C;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(196, 156, 72, 0.3);
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 1200px) {
+  .contact-hero-section .hero-title {
+    font-size: 4rem;
+  }
+  .contact-hero-section .hero-subtitle {
+    font-size: 1.6rem;
+  }
+  .section-title {
+    font-size: 2.8rem;
+  }
+  .form-title {
+    font-size: 2.2rem;
+  }
+}
+
+.contact-info .info-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #1A2B3C;
+  margin-bottom: 0.3rem;
+  font-size: 1.25rem;
+}
+
+.contact-info .info-text {
+  font-family: 'Open Sans', sans-serif;
+  color: #666666;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+  display: block; /* Ensure it takes full width */
+}
+
+.contact-info .info-text:hover {
+  color: #C49C48; /* Golden hover effect */
+}
+
+/* Social Icons */
+.social-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #1A2B3C;
+  margin-bottom: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.social-icons a {
+  font-size: 1.8rem;
+  color: #1A2B3C;
+  margin-left: 1.2rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+
+.social-icons a:hover {
+  color: #C49C48; /* Golden hover effect */
+  transform: translateY(-5px); /* Slight lift on hover */
+}
+
+/* --- Contact Form Styling --- */
+.contact-form {
+  background-color: #FFFFFF;
+  padding: 3rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Softer shadow */
+  animation: fadeIn 1s ease-out; /* Simple fade-in animation */
+}
+
+.form-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #1A2B3C;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.form-label {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: #1A2B3C;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.form-control {
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  border: 1px solid #DDDDDD;
+  background-color: #F8F8F8;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #C49C48;
+  box-shadow: 0 0 0 0.25rem rgba(196, 156, 72, 0.25); /* Golden focus ring */
+  background-color: #FFFFFF;
+}
+
+textarea.form-control {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.btn-submit {
+  background-color: #1A2B3C; /* Dark blue button */
+  color: #FFFFFF;
+  border: none;
+  padding: 0.9rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%; /* Full width button */
+  margin-top: 1.5rem;
+}
+
+.btn-submit:hover {
+  background-color: #C49C48; /* Golden hover effect */
+  color: #1A2B3C;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(196, 156, 72, 0.3);
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 1200px) {
+  .contact-hero-section .hero-title {
+    font-size: 4rem;
+  }
+  .contact-hero-section .hero-subtitle {
+    font-size: 1.6rem;
+  }
+  .section-title {
+    font-size: 2.8rem;
+  }
+  .form-title {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .contact-hero-section {
+    height: 50vh;
+  }
+  .contact-hero-section .hero-title {
+    font-size: 3.5rem;
+  }
+  .contact-hero-section .hero-subtitle {
+    font-size: 1.4rem;
+  }
+  .section-title {
+    font-size: 2.5rem;
+  }
+  .form-title {
+    font-size: 2rem;
+  }
+  .contact-form {
+    padding: 2.5rem;
+  }
+  .contact-info li {
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-hero-section {
+    height: auto;
+    min-height: 40vh;
+    padding: 4rem 1rem;
+  }
+  .contact-hero-section .hero-title {
+    font-size: 2.8rem;
+  }
+  .contact-hero-section .hero-subtitle {
+    font-size: 1.2rem;
+  }
+  .section-title {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+  .section-title::after {
+    right: 50%;
+    transform: translateX(50%);
+  }
+  .section-lead {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .contact-form {
+    padding: 2rem;
+    margin-top: 3rem;
+  }
+  .form-title {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  .social-title {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  .social-icons {
+    text-align: center;
+  }
+  .social-icons a {
+    margin: 0 0.8rem; /* Adjust spacing for mobile */
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+
+
