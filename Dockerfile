@@ -5,6 +5,11 @@ WORKDIR /var/www/html
 
 RUN composer install --no-dev --optimize-autoloader
 
+RUN php artisan key:clear || true
+RUN php artisan config:clear || true
+RUN php artisan route:clear || true
+RUN php artisan view:clear || true
+
 RUN chown -R nginx:nginx /var/www/html \
  && chmod -R 775 storage bootstrap/cache
 
