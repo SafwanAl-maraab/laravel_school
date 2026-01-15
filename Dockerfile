@@ -18,4 +18,7 @@ RUN php artisan view:clear || true
 RUN chown -R nginx:nginx /var/www/html \
  && chmod -R 775 storage bootstrap/cache database
 
+
+RUN php artisan migrate --force || true
+
 ENV WEBROOT=/var/www/html/public
