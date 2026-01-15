@@ -18,6 +18,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/test', function () {
+    return 'OK';
+});
 
 
 // الصفحة الرئيسية (يمكن تعديلها لاحقًا)
